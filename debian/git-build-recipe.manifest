@@ -1,0 +1,2 @@
+# git-build-recipe format 0.4 deb-version {debupstream}
+lp:~mwhudson/+git/golang-race-detector-runtime git-commit:02aa3884016f1cc99f408b1d89eb580fa69cc25c
