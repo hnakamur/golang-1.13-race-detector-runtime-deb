@@ -1,3 +1,10 @@
+golang-1.10-race-detector-runtime (0.0+svn68e153~ubuntu16.04.1hnakamur1) xenial; urgency=medium
+
+  * Update package name for Go 1.10.
+  * Update to version used by Go 1.10.
+
+ -- Hiroaki Nakamura <hnakamur@gmail.com>  Sun, 28 Jan 2018 17:40:00 +0900
+
 golang-1.9-race-detector-runtime (0.0+svn285455~ubuntu16.04.1hnakamur1) xenial; urgency=medium
 
   * Update package name for Go 1.9.
