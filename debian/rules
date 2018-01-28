@@ -35,13 +35,15 @@ override_dh_auto_build:
 
 PKD  = $(abspath $(dir $(MAKEFILE_LIST)))
 PKG  = $(shell dpkg-parsechangelog -l$(PKD)/changelog --show-field=Source)
-REVNO = $(shell dpkg-parsechangelog  -SVersion | sed -e 's/.*svn\([0-9]\+\)-.*/\1/')
+COMMIT = $(shell dpkg-parsechangelog -SVersion | sed -rne 's/[^+]*\+git([0-9a-f]+).*/\1/p')
 
 get-orig-source:
-	svn co http://llvm.org/svn/llvm-project/compiler-rt/trunk compiler-rt
-	cd compiler-rt && svn export -r $(REVNO) . "../$(PKG)_0.0+svn$(REVNO)"
-	tar czf $(PKG)_0.0+svn$(REVNO).orig.tar.gz $(PKG)_0.0+svn$(REVNO)
-	rm -rf compiler-rt $(PKG)_0.0+svn$(REVNO)
+	ls | grep -v '^debian$$' | xargs rm -rf
+	git clone http://llvm.org/git/compiler-rt.git
+	cd compiler-rt \
+		&& echo .gitignore export-ignore > .gitattributes \
+		&& git archive --worktree-attributes $(COMMIT) | tar x -C ..
+	rm -rf compiler-rt
 
 %:
 	dh $@

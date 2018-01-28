@@ -1,7 +1,8 @@
-golang-1.10-race-detector-runtime (0.0+svn68e153~ubuntu16.04.1hnakamur1) xenial; urgency=medium
+golang-1.10-race-detector-runtime (0.0+git68e153~ubuntu16.04.1hnakamur1) xenial; urgency=medium
 
   * Update package name for Go 1.10.
   * Update to version used by Go 1.10.
+  * Get orig source from the LLVM compiler-rt git repository.
 
  -- Hiroaki Nakamura <hnakamur@gmail.com>  Sun, 28 Jan 2018 17:40:00 +0900
 
