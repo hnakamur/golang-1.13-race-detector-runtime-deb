@@ -1,3 +1,10 @@
+golang-1.10-race-detector-runtime (0.1+git68e153-1ubuntu1ppa1~ubuntu18.04.1) bionic; urgency=medium
+
+  * Change target to Ubuntu 18.04 LTS
+  * Replace struct sigaltstack with stack_t to avoid compile errors
+
+ -- Hiroaki Nakamura <hnakamur@gmail.com>  Fri, 08 Jun 2018 16:43:10 +0900
+
 golang-1.10-race-detector-runtime (0.0+git68e153~ubuntu16.04.1hnakamur1) xenial; urgency=medium
 
   * Update package name for Go 1.10.
