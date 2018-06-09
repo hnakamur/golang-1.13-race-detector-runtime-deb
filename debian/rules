@@ -31,6 +31,8 @@ override_dh_strip:
 	:
 
 override_dh_auto_build:
+	grep -rl --include='*.c' --include='*.cc' --include='*.h' 'struct sigaltstack' . | \
+		xargs -n 1 sed -i.bak 's/struct sigaltstack;//g;s/struct sigaltstack/stack_t/g'
 	cd lib/tsan/go && ./buildgo.sh
 
 PKD  = $(abspath $(dir $(MAKEFILE_LIST)))
