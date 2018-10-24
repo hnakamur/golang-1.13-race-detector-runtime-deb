@@ -1,3 +1,10 @@
+golang-1.11-race-detector-runtime (0.1+gitfe2c72c-1ubuntu1ppa1~ubuntu18.04.1) bionic; urgency=medium
+
+  * Update LLVM commit to fe2c72c59aa7f4afa45e3f65a5d16a374b6cce26
+    https://github.com/golang/go/blob/go1.11/src/runtime/race/README
+
+ -- Hiroaki Nakamura <hnakamur@gmail.com>  Wed, 24 Oct 2018 18:30:00 +0900
+
 golang-1.10-race-detector-runtime (0.1+git68e153-1ubuntu1ppa1~ubuntu18.04.1) bionic; urgency=medium
 
   * Change target to Ubuntu 18.04 LTS
