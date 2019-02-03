@@ -1,3 +1,9 @@
+golang-1.12-race-detector-runtime (0.1+gitfe2c72c-1ubuntu1ppa1~ubuntu18.04.1) bionic; urgency=medium
+
+  * Update package name for Go 1.12.
+
+ -- Hiroaki Nakamura <hnakamur@gmail.com>  Sun, 03 Feb 2019 21:24:50 +0900
+
 golang-1.11-race-detector-runtime (0.1+gitfe2c72c-1ubuntu1ppa1~ubuntu18.04.1) bionic; urgency=medium
 
   * Update LLVM commit to fe2c72c59aa7f4afa45e3f65a5d16a374b6cce26
